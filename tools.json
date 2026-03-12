@@ -114,7 +114,7 @@
     "url": "https://t.me/JKT48Live",
     "sourceUrl": null,
     "creator": "JKT48Live",
-    "tags": ["Notifier", "Live Stream"]
+    "tags": ["Notifier", "Live Stream", "Log"]
   },
   {
     "name": "JKT48 x SHOWROOM Log",
@@ -123,7 +123,7 @@
     "url": "https://t.me/showroomlog48",
     "sourceUrl": null,
     "creator": "SHOWROOMLog48",
-    "tags": ["Notifier", "Live Stream"]
+    "tags": ["Notifier", "Live Stream", "Log"]
   },
   {
     "name": "PDF Rusak",
