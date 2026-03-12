@@ -160,5 +160,14 @@
     "sourceUrl": null,
     "creator": "JNCK Media",
     "tags": ["Utility"]
+  },
+  {
+    "name": "JKT48 Schedule on Google Calendar",
+    "type": "Sync",
+    "description": "Sinkronkan jadwal JKT48 ke Google Calendar.",
+    "url": "https://calendar.google.com/calendar/u/0?cid=amt0NDgtY2FsZW5kYXJAamt0NDhjYWxlbmRhci5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbQ",
+    "sourceUrl": null,
+    "creator": "dandyraka",
+    "tags": ["Sync", "Schedule"]
   }
 ]
