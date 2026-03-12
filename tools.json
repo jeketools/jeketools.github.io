@@ -142,5 +142,23 @@
     "sourceUrl": "https://github.com/MrcellSbst/Tierlist-JKT48",
     "creator": "MrcellSbst",
     "tags": ["Sorter"]
+  },
+  {
+    "name": "Showroom Farming Mission",
+    "type": "Web Tool",
+    "description": "Tool farming Showroom untuk membantu menyelesaikan mission.",
+    "url": "https://jnckmedia.com/en/showroom-farm",
+    "sourceUrl": null,
+    "creator": "JNCK Media",
+    "tags": ["Utility"]
+  },
+  {
+    "name": "Showroom Farming Ad Reward",
+    "type": "Web Tool",
+    "description": "Tool farming Showroom untuk membantu menyelesaikan bonus dan lottery seed Ad Reward Showroom.",
+    "url": "https://jnckmedia.com/en/showroom-farming-ad-reward",
+    "sourceUrl": null,
+    "creator": "JNCK Media",
+    "tags": ["Utility"]
   }
 ]
