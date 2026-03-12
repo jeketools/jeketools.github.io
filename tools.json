@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Hukuman JKT48",
+    "type": "Countdown",
+    "description": "Tracker realtime hukuman member JKT48.",
+    "url": "https://dandyraka.github.io/hukumanJKT48/",
+    "sourceUrl": "https://github.com/dandyraka/hukumanJKT48",
+    "creator": "dandyraka",
+    "tags": ["Countdown"]
+  },
+  {
+    "name": "My Theater Seat History",
+    "type": "Seat Tracker",
+    "description": "Tool pencatatan seat theater JKT48 yang pernah disinggahi.",
+    "url": "https://dandyraka.github.io/row-theater/",
+    "sourceUrl": "https://github.com/dandyraka/row-theater",
+    "creator": "dandyraka",
+    "tags": ["Theater"]
+  },
+  {
+    "name": "Theater 2-Shot Roulette",
+    "type": "Roulette",
+    "description": "Replika gacha roulette 2-shot theater.",
+    "url": "https://dandyraka.github.io/2srulet/",
+    "sourceUrl": "https://github.com/dandyraka/2srulet",
+    "creator": "dandyraka",
+    "tags": ["Gacha", "Theater"]
+  },
+  {
+    "name": "Umandanify",
+    "type": "Translator",
+    "description": "Generator dan translator bahasa Umandana yang biasa digunakan oleh Muthe JKT48.",
+    "url": "https://dandyraka.github.io/umandanify/",
+    "sourceUrl": "https://github.com/dandyraka/umandanify",
+    "creator": "dandyraka",
+    "tags": ["Translator"]
+  },
+  {
+    "name": "JKT48 Showroom",
+    "type": "Live Stream & Log",
+    "description": "Web untuk menonton live member JKT48 beserta lognya.",
+    "url": "https://www.jkt48showroom.com/",
+    "sourceUrl": "https://github.com/ikhbaldwiyan/showroom",
+    "creator": "ikhbaldwiyan",
+    "tags": ["Live Stream", "Log"]
+  },
+  {
+    "name": "JKT48 Showroom Log",
+    "type": "Live Stream & Log",
+    "description": "Web untuk menonton live member JKT48 beserta lognya.",
+    "url": "https://dc.crstlnz.my.id/",
+    "sourceUrl": "https://github.com/crstlnz/jkt48showroom",
+    "creator": "crstlnz",
+    "tags": ["Live Stream", "Log"]
+  },
+  {
+    "name": "Kata Oshi",
+    "type": "Web Game",
+    "description": "Permainan kartu pencocokan situasi lucu dengan kutipan unik member JKT48.",
+    "url": "https://sasaecollective.github.io/kata-oshi/",
+    "sourceUrl": "https://github.com/SasaeCollective/kata-oshi",
+    "creator": "SasaeCollective",
+    "tags": ["Game"]
+  },
+  {
+    "name": "Member Sorter",
+    "type": "Sorter",
+    "description": "Aplikasi interaktif untuk mengurutkan daftar member JKT48 favorit berdasarkan preferensi pribadi melalui perbandingan satu lawan satu.",
+    "url": "https://jkt48membersorter.vercel.app/",
+    "sourceUrl": "https://github.com/adityaiwd/j-sorter",
+    "creator": "adityaiwd",
+    "tags": ["Sorter"]
+  },
+  {
+    "name": "Oshi Sorter",
+    "type": "Sorter",
+    "description": "Aplikasi interaktif untuk mengurutkan daftar member JKT48 favorit berdasarkan preferensi pribadi melalui perbandingan satu lawan satu.",
+    "url": "https://dc.crstlnz.my.id/sorter",
+    "sourceUrl": "https://github.com/crstlnz/jkt48showroom",
+    "creator": "crstlnz",
+    "tags": ["Sorter"]
+  },
+  {
+    "name": "Blind Ranking Oshi",
+    "type": "Sorter",
+    "description": "Tantangan menyusun urutan member JKT48 secara acak tanpa mengetahui siapa yang akan muncul berikutnya.",
+    "url": "https://jkt48-blurred-agm4r.vercel.app/blind-ranking-oshi",
+    "sourceUrl": null,
+    "creator": "Agmar",
+    "tags": ["Sorter"]
+  },
+  {
+    "name": "Wrapped",
+    "type": "Extension",
+    "description": "Alat analisis untuk merangkum statistik aktivitas dan riwayat transaksi kamu di website resmi JKT48.",
+    "url": "https://chromewebstore.google.com/detail/jkt48-wrapped/gignkeckilfagdgfnjflcenkjjmbmhic",
+    "sourceUrl": "https://github.com/JKT48Live/wrappedExt",
+    "creator": "JKT48Live",
+    "tags": ["Extension"]
+  },
+  {
+    "name": "Twibbon",
+    "type": "Web Tool",
+    "description": "Alat pembuat bingkai foto profil (twibbon) dengan berbagai desain menarik bertema event JKT48.",
+    "url": "https://jkt48live.github.io/twibbon/",
+    "sourceUrl": "https://github.com/JKT48Live/twibbon",
+    "creator": "JKT48Live",
+    "tags": ["Utility"]
+  },
+  {
+    "name": "JKT48 Live",
+    "type": "Bot Service",
+    "description": "Layanan notifikasi real-time via Telegram untuk memantau jadwal dan pemberitahuan live stream member JKT48 di berbagai platform.",
+    "url": "https://t.me/JKT48Live",
+    "sourceUrl": null,
+    "creator": "JKT48Live",
+    "tags": ["Notifier", "Live Stream"]
+  },
+  {
+    "name": "JKT48 x SHOWROOM Log",
+    "type": "Bot Service",
+    "description": "Layanan notifikasi real-time via Telegram untuk memantau jadwal dan pemberitahuan live stream member JKT48 di berbagai platform.",
+    "url": "https://t.me/showroomlog48",
+    "sourceUrl": null,
+    "creator": "SHOWROOMLog48",
+    "tags": ["Notifier", "Live Stream"]
+  },
+  {
+    "name": "PDF Rusak",
+    "type": "Guide",
+    "description": "Koleksi panduan chant dan lirik lagu JKT48 (versi rusak).",
+    "url": "https://chantmix.github.io/pdfrusak/",
+    "sourceUrl": "https://github.com/chantmix/pdfrusak",
+    "creator": "chantmix",
+    "tags": ["Chant", "Guide"]
+  },
+  {
+    "name": "Tierlist",
+    "type": "Sorter",
+    "description": "Platform serbaguna untuk membuat tier list member, menyusun dream setlist, hingga member roulette dalam satu aplikasi.",
+    "url": "https://www.tierlistjkt48.my.id/",
+    "sourceUrl": "https://github.com/MrcellSbst/Tierlist-JKT48",
+    "creator": "MrcellSbst",
+    "tags": ["Sorter"]
+  }
+]

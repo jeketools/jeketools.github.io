@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeketools - JKT48 Tools Directory</title>
+  <meta name="description" content="Direktori tools JKT48.">
+  <meta name="keywords" content="JKT48, JKT48 tools, Jeketools, fandom tools, showroom, sorter, twibbon, roulette">
+  <meta name="author" content="Jeketools">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#cc4a2b">
+  <meta name="application-name" content="Jeketools">
+  <meta name="apple-mobile-web-app-title" content="Jeketools">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jeketools - JKT48 Tools Directory">
+  <meta property="og:description" content="Direktori tools JKT48.">
+  <meta property="og:site_name" content="Jeketools">
+  <meta property="og:image" content="./assets/images/jeketools_meta.png">
+  <meta property="og:image:alt" content="Jeketools preview image">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jeketools - JKT48 Tools Directory">
+  <meta name="twitter:description" content="Direktori tools JKT48.">
+  <meta name="twitter:image" content="./assets/images/jeketools_meta.png">
+  <meta name="twitter:image:alt" content="Jeketools preview image">
+
+  <link rel="icon" type="image/png" href="./assets/images/jeketools_logo.png">
+  <link rel="apple-touch-icon" href="./assets/images/jeketools_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <div class="hero-copyblock">
+        <p class="eyebrow">JKT48 Tools Directory</p>
+        <h1>Jeketools.</h1>
+        <p class="hero-copy">
+          Wadah kreatif yang mengumpulkan semua tools interaktif dan layanan informasi JKT48 dalam satu tempat.
+        </p>
+      </div>
+      <div class="hero-panel">
+        <p class="hero-panel-label">Ringkas</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong id="tool-count">0</strong>
+            <span>Total tools</span>
+          </div>
+          <div class="stat">
+            <strong id="creator-count">0</strong>
+            <span>Creators listed</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls" aria-label="Filter tools">
+        <label class="search-field">
+          <span class="search-label">Cari tool</span>
+          <input id="search-input" type="search" placeholder="Cari nama, tag, creator, atau deskripsi">
+        </label>
+        <div id="filter-bar" class="filter-bar"></div>
+      </section>
+
+      <section class="grid-section">
+        <div id="tools-grid" class="tools-grid" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <h2>Tidak ada hasil.</h2>
+          <p>Coba ganti kata kunci atau pilih filter lain.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; Jeketools</p>
+      <div class="footer-links">
+        <a href="./privacy-policy.html">Privacy Policy</a>
+        <a href="./terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="./copyright-policy.html">Copyright Policy</a>
+      </div>
+    </footer>
+  </div>
+
+  <template id="tool-card-template">
+    <article class="tool-card">
+      <div class="tool-card-top">
+        <p class="tool-type"></p>
+        <h2 class="tool-name"></h2>
+        <p class="tool-desc"></p>
+      </div>
+      <dl class="tool-details">
+        <div>
+          <dt>Creator</dt>
+          <dd class="tool-creator"></dd>
+        </div>
+      </dl>
+      <div class="tool-card-meta">
+        <div class="tool-tags"></div>
+      </div>
+      <div class="tool-actions">
+        <a class="tool-source" target="_blank" rel="noreferrer"><i class="fa-solid fa-code"></i></a>
+        <a class="tool-link">Open</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="./assets/js/app.js" defer></script>
+</body>
+</html>
