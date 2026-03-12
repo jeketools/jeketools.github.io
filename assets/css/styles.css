@@ -216,6 +216,7 @@ body::after {
   grid-template-columns: 1fr 1fr;
   gap: 0.7rem;
   align-items: stretch;
+  margin-top: auto;
 }
 
 .filter-chip,
@@ -280,13 +281,23 @@ body::after {
 }
 
 .tool-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   padding: 1.3rem;
   min-height: 100%;
   opacity: 1;
   transform: none;
   animation: rise-in 480ms ease both;
+}
+
+.tool-card-top {
+  display: grid;
+  gap: 0;
+}
+
+.tool-card-meta {
+  margin-top: 0;
 }
 
 .tool-type {
@@ -342,10 +353,13 @@ body::after {
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-height: 3.25rem;
+  padding: 0 1rem;
   text-decoration: none;
   font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1;
   border-radius: 999px;
-  padding: 0.82rem 1.05rem;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
@@ -359,6 +373,11 @@ body::after {
   color: var(--accent-dark);
   border: 1px solid rgba(79, 0, 143, 0.12);
   background: rgba(255, 255, 255, 0.76);
+}
+
+.tool-source i {
+  font-size: 1.35rem;
+  line-height: 1;
 }
 
 .empty-state {
