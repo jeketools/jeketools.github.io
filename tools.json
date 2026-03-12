@@ -169,5 +169,14 @@
     "sourceUrl": null,
     "creator": "dandyraka",
     "tags": ["Sync", "Schedule"]
+  },
+  {
+    "name": "JKT48 Career Destiny",
+    "type": "Fun",
+    "description": "Lihat takdir profesi apa yang cocok untuk Oshimu!",
+    "url": "https://jkt48-career-random.vercel.app/",
+    "sourceUrl": "https://github.com/JuandaPatra/jkt48-career-random",
+    "creator": "JuandaPatra",
+    "tags": ["Fun"]
   }
 ]
