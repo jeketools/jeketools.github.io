@@ -12,6 +12,85 @@ const resultCopy = document.querySelector("#result-copy");
 const emptyState = document.querySelector("#empty-state");
 const searchInput = document.querySelector("#search-input");
 const template = document.querySelector("#tool-card-template");
+const installModal = document.querySelector("#install-modal");
+const installButton = document.querySelector("#install-app");
+const installLaterButton = document.querySelector("#install-later");
+
+let installPromptEvent = null;
+let hasShownInstallModal = false;
+
+async function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) {
+    return;
+  }
+
+  try {
+    await navigator.serviceWorker.register("./service-worker.js");
+  } catch (error) {
+    console.error("Service worker registration failed:", error);
+  }
+}
+
+function hideInstallModal() {
+  if (!installModal) {
+    return;
+  }
+
+  installModal.hidden = true;
+  sessionStorage.setItem("jeketools-install-dismissed", "true");
+}
+
+function showInstallModal() {
+  if (
+    !installModal ||
+    hasShownInstallModal ||
+    window.matchMedia("(display-mode: standalone)").matches ||
+    navigator.standalone === true
+  ) {
+    return;
+  }
+
+  hasShownInstallModal = true;
+  installModal.hidden = false;
+}
+
+function setupInstallPrompt() {
+  if (!installModal || !installButton || !installLaterButton) {
+    return;
+  }
+
+  if (sessionStorage.getItem("jeketools-install-dismissed") !== "true") {
+    window.setTimeout(() => {
+      showInstallModal();
+    }, 1800);
+  }
+
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    installPromptEvent = event;
+    showInstallModal();
+  });
+
+  window.addEventListener("appinstalled", () => {
+    installPromptEvent = null;
+    hideInstallModal();
+  });
+
+  installLaterButton.addEventListener("click", () => {
+    hideInstallModal();
+  });
+
+  installButton.addEventListener("click", async () => {
+    if (!installPromptEvent) {
+      return;
+    }
+
+    installPromptEvent.prompt();
+    await installPromptEvent.userChoice;
+    installPromptEvent = null;
+    hideInstallModal();
+  });
+}
 
 function getFilters() {
   return ["All", ...new Set(state.tools.flatMap((tool) => tool.tags))];
@@ -128,4 +207,6 @@ searchInput.addEventListener("input", (event) => {
   renderTools();
 });
 
+registerServiceWorker();
+setupInstallPrompt();
 loadTools();

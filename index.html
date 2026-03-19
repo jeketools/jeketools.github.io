@@ -13,6 +13,7 @@
   <meta name="application-name" content="Jeketools">
   <meta name="apple-mobile-web-app-title" content="Jeketools">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="format-detection" content="telephone=no">
 
   <meta property="og:locale" content="id_ID">
@@ -31,6 +32,7 @@
 
   <link rel="icon" type="image/png" href="./assets/images/jeketools_logo.png">
   <link rel="apple-touch-icon" href="./assets/images/jeketools_logo.png">
+  <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -109,6 +111,20 @@
       </div>
     </article>
   </template>
+
+  <div id="install-modal" class="install-modal" hidden>
+    <section class="install-dialog" role="dialog" aria-labelledby="install-title">
+      <p class="install-eyebrow">Install App</p>
+      <h2 id="install-title">Pasang Jeketools ke home screen.</h2>
+      <p id="install-copy" class="install-copy">
+        Buka Jeketools lebih cepat.
+      </p>
+      <div class="install-actions">
+        <button id="install-later" class="install-button install-button-secondary" type="button">Later</button>
+        <button id="install-app" class="install-button install-button-primary" type="button">Install</button>
+      </div>
+    </section>
+  </div>
 
   <script src="./assets/js/app.js" defer></script>
 </body>
