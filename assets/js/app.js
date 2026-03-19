@@ -17,18 +17,23 @@ const installButton = document.querySelector("#install-app");
 const installLaterButton = document.querySelector("#install-later");
 const installTitle = document.querySelector("#install-title");
 const installCopy = document.querySelector("#install-copy");
+const installHelp = document.querySelector("#install-help");
 
 let installPromptEvent = null;
 let hasShownInstallModal = false;
 
 function isAppleMobileDevice() {
   const userAgent = navigator.userAgent.toLowerCase();
-  const touchMac = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
-  return /iphone|ipad|ipod/.test(userAgent) || touchMac;
+  const isTouchCapableAppleDesktopUserAgent =
+    userAgent.includes("macintosh") &&
+    "ontouchend" in document &&
+    navigator.maxTouchPoints > 1;
+
+  return /iphone|ipad|ipod/.test(userAgent) || isTouchCapableAppleDesktopUserAgent;
 }
 
 function updateInstallPromptContent() {
-  if (!installTitle || !installCopy || !installButton) {
+  if (!installTitle || !installCopy || !installButton || !installHelp) {
     return;
   }
 
@@ -36,12 +41,14 @@ function updateInstallPromptContent() {
     installTitle.textContent = "Pasang Jeketools di iPhone.";
     installCopy.textContent = "Buka menu Share di Safari, lalu pilih Add to Home Screen.";
     installButton.textContent = "How to Install";
+    installHelp.hidden = true;
     return;
   }
 
   installTitle.textContent = "Pasang Jeketools ke home screen.";
   installCopy.textContent = "Buka Jeketools lebih cepat.";
   installButton.textContent = "Install";
+  installHelp.hidden = true;
 }
 
 async function registerServiceWorker() {
@@ -62,6 +69,9 @@ function hideInstallModal() {
   }
 
   installModal.hidden = true;
+  if (installHelp) {
+    installHelp.hidden = true;
+  }
   sessionStorage.setItem("jeketools-install-dismissed", "true");
 }
 
@@ -110,7 +120,7 @@ function setupInstallPrompt() {
   installButton.addEventListener("click", async () => {
     if (!installPromptEvent) {
       if (isAppleMobileDevice()) {
-        updateInstallPromptContent();
+        installHelp.hidden = !installHelp.hidden;
       }
       return;
     }
