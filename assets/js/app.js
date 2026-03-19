@@ -15,9 +15,34 @@ const template = document.querySelector("#tool-card-template");
 const installModal = document.querySelector("#install-modal");
 const installButton = document.querySelector("#install-app");
 const installLaterButton = document.querySelector("#install-later");
+const installTitle = document.querySelector("#install-title");
+const installCopy = document.querySelector("#install-copy");
 
 let installPromptEvent = null;
 let hasShownInstallModal = false;
+
+function isAppleMobileDevice() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  const touchMac = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+  return /iphone|ipad|ipod/.test(userAgent) || touchMac;
+}
+
+function updateInstallPromptContent() {
+  if (!installTitle || !installCopy || !installButton) {
+    return;
+  }
+
+  if (isAppleMobileDevice()) {
+    installTitle.textContent = "Pasang Jeketools di iPhone.";
+    installCopy.textContent = "Buka menu Share di Safari, lalu pilih Add to Home Screen.";
+    installButton.textContent = "How to Install";
+    return;
+  }
+
+  installTitle.textContent = "Pasang Jeketools ke home screen.";
+  installCopy.textContent = "Buka Jeketools lebih cepat.";
+  installButton.textContent = "Install";
+}
 
 async function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) {
@@ -59,6 +84,8 @@ function setupInstallPrompt() {
     return;
   }
 
+  updateInstallPromptContent();
+
   if (sessionStorage.getItem("jeketools-install-dismissed") !== "true") {
     window.setTimeout(() => {
       showInstallModal();
@@ -82,6 +109,9 @@ function setupInstallPrompt() {
 
   installButton.addEventListener("click", async () => {
     if (!installPromptEvent) {
+      if (isAppleMobileDevice()) {
+        updateInstallPromptContent();
+      }
       return;
     }
 
