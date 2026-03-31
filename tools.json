@@ -187,5 +187,14 @@
     "sourceUrl": null,
     "creator": "ROTF TEAM",
     "tags": ["Game"]
+  },
+  {
+    "name": "Beginner's Gamble - JKT48 Jackpot Game",
+    "type": "Web Game",
+    "description": "Simulasi gambling dengan tema JKT48, terdapat edukasi agar pemain memahami risiko dalam berjudi.",
+    "url": "https://h48ilihsan.github.io/game/beginners-gamble",
+    "sourceUrl": null,
+    "creator": "h48ilihsan",
+    "tags": ["Game", "Educational"]
   }
 ]
