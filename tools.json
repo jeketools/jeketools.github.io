@@ -48,7 +48,7 @@
     "name": "JKT48 Showroom Log",
     "type": "Live Stream & Log",
     "description": "Web untuk menonton live member JKT48 beserta lognya.",
-    "url": "https://dc.crstlnz.my.id/",
+    "url": "https://48live.my.id/",
     "sourceUrl": "https://github.com/crstlnz/jkt48showroom",
     "creator": "crstlnz",
     "tags": ["Live Stream", "Log"]
@@ -75,7 +75,7 @@
     "name": "Oshi Sorter",
     "type": "Sorter",
     "description": "Aplikasi interaktif untuk mengurutkan daftar member JKT48 favorit berdasarkan preferensi pribadi melalui perbandingan satu lawan satu.",
-    "url": "https://dc.crstlnz.my.id/sorter",
+    "url": "https://48live.my.id/sorter",
     "sourceUrl": "https://github.com/crstlnz/jkt48showroom",
     "creator": "crstlnz",
     "tags": ["Sorter"]
