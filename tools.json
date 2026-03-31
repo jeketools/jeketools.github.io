@@ -178,5 +178,14 @@
     "sourceUrl": "https://github.com/JuandaPatra/jkt48-career-random",
     "creator": "JuandaPatra",
     "tags": ["Fun"]
+  },
+  {
+    "name": "Tebak Lagu JKT48",
+    "type": "Web Game",
+    "description": "Tebak lagu JKT48 berdasarkan potongan lirik atau melodi dalam permainan interaktif.",
+    "url": "https://jkt48lagu.bukanmod.cloud/",
+    "sourceUrl": null,
+    "creator": "ROTF TEAM",
+    "tags": ["Game"]
   }
 ]
