@@ -1,8 +1,7 @@
-const CACHE_NAME = "jeketools-v1";
+const CACHE_NAME = "jeketools-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./tools.json",
   "./privacy-policy.html",
   "./terms-and-conditions.html",
   "./copyright-policy.html",
@@ -39,9 +38,27 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
+  const requestUrl = new URL(event.request.url);
+
   if (event.request.mode === "navigate") {
     event.respondWith(
       fetch(event.request).catch(() => caches.match("./index.html"))
+    );
+    return;
+  }
+
+  if (requestUrl.pathname.endsWith("/tools.json") || requestUrl.pathname === "/tools.json") {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
+
+          return networkResponse;
+        })
+        .catch(() => caches.match(event.request))
     );
     return;
   }

@@ -222,7 +222,7 @@ function renderTools() {
 
 async function loadTools() {
   try {
-    const response = await fetch("./tools.json");
+    const response = await fetch("./tools.json", { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
